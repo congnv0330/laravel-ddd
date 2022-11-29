@@ -6,7 +6,7 @@ use App\Models\User;
 use Domain\User\Dtos\UpdateUserDto;
 use Illuminate\Support\Facades\Hash;
 
-class CreateUserAction
+class UpdateUserAction
 {
     public function execute(User $user, UpdateUserDto $updateUserDto): User
     {
