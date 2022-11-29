@@ -2,12 +2,19 @@
 
 namespace Domain\User\Actions;
 
-use App\Models\User;
 use Domain\User\Dtos\UpdateUserDto;
+use Domain\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class UpdateUserAction
 {
+    /**
+     * Update User
+     *
+     * @param User $user
+     * @param UpdateUserDto $updateUserDto
+     * @return User
+     */
     public function execute(User $user, UpdateUserDto $updateUserDto): User
     {
         $user->name = $updateUserDto->name;

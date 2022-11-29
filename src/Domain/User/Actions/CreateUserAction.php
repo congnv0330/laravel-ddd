@@ -2,12 +2,18 @@
 
 namespace Domain\User\Actions;
 
-use App\Models\User;
 use Domain\User\Dtos\StoreUserDto;
+use Domain\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class CreateUserAction
 {
+    /**
+     * Create User
+     *
+     * @param StoreUserDto $storeUserDto
+     * @return User
+     */
     public function execute(StoreUserDto $storeUserDto): User
     {
         $user = new User();

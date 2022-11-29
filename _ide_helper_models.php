@@ -10,9 +10,9 @@
  */
 
 
-namespace App\Models{
+namespace Domain\User\Models{
 /**
- * App\Models\User
+ * Domain\User\Models\User
  *
  * @property int $id
  * @property string $name
