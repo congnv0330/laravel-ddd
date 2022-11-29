@@ -6,7 +6,7 @@ use Domain\User\Dtos\StoreUserDto;
 use Domain\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class CreateUserAction
+class StoreUserAction
 {
     /**
      * Create User
