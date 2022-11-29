@@ -10,10 +10,14 @@ class CreateUserAction
 {
     public function execute(StoreUserDto $storeUserDto): User
     {
-        return User::create([
-            'name' => $storeUserDto->name,
-            'email' => $storeUserDto->email,
-            'password' => Hash::make($storeUserDto->password),
-        ]);
+        $user = new User();
+
+        $user->name = $storeUserDto->name;
+        $user->email = $storeUserDto->email;
+        $user->password = Hash::make($storeUserDto->password);
+
+        $user->save();
+
+        return $user;
     }
 }

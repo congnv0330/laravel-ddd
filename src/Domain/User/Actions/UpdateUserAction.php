@@ -11,7 +11,6 @@ class CreateUserAction
     public function execute(User $user, UpdateUserDto $updateUserDto): User
     {
         $user->name = $updateUserDto->name;
-
         $user->email = $updateUserDto->email;
 
         if ($updateUserDto->password !== null) {
